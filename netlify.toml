@@ -1,0 +1,9 @@
+# Site Netlify « lyia-redirect » : redirige lyia.io vers https://www.lyia.io en gardant le chemin.
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "https://www.lyia.io/:splat"
+  status = 301
+  force = true

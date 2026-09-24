@@ -1,7 +1,7 @@
 # lyia-redirect
 
-Redirige `lyia.io` (domaine sans www) vers `https://www.lyia.io`, en conservant le chemin.
+Redirige `lyia.io` (domaine sans www) vers `https://www.lyia.io`, en conservant le chemin (redirection permanente 301).
 
-Le domaine est acheté chez Wix, qui ne permet pas de faire pointer le domaine nu vers Cloudflare Pages. Ce dépôt est donc servi par GitHub Pages : les enregistrements A de `lyia.io` pointent vers `185.199.108.153`, `.109.153`, `.110.153` et `.111.153`, et GitHub fournit le certificat HTTPS.
+Le domaine est acheté chez Wix, qui ne permet pas de faire pointer le domaine nu vers Cloudflare Pages. Ce dépôt est servi par **Netlify** : l'enregistrement A de `lyia.io` pointe vers `75.2.60.5`, Netlify fournit le certificat HTTPS et applique `_redirects` / `netlify.toml`.
 
-`404.html` est une copie de `index.html` : toute adresse inconnue, donc toute page de l'ancien domaine, est redirigée vers la même page sur `www.lyia.io`.
+`index.html` et `404.html` restent en secours (redirection côté navigateur). GitHub Pages a été abandonné : son certificat est resté bloqué (`bad_authz`).
